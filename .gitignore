@@ -1,0 +1,35 @@
+# Secrets — never commit (use HF Space Secrets instead)
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Editors / IDEs
+.vscode/
+.idea/
+.vs/
+*.swp
+
+# Test / build artefacts
+.pytest_cache/
+*.bak
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs
+*.log
+
+# Local backups of older versions (git history replaces them)
+_backup_*/
+
+# Private review notes (kept locally only)
+relatorio/REVISOES-PROFESSOR.md

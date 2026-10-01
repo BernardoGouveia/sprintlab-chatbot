@@ -1,0 +1,76 @@
+<svg viewBox="0 0 920 620" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="920" height="620" fill="#ffffff"/>
+  <text x="460" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1b1d1f">Diagrama de Casos de Uso — SprintLab Chatbox</text>
+
+  <!-- Ator principal: Utilizador -->
+  <g stroke="#1b1d1f" stroke-width="2" fill="none">
+    <circle cx="95" cy="285" r="15" fill="#e8eafc"/>
+    <line x1="95" y1="300" x2="95" y2="348"/>
+    <line x1="68" y1="316" x2="122" y2="316"/>
+    <line x1="95" y1="348" x2="76" y2="384"/>
+    <line x1="95" y1="348" x2="114" y2="384"/>
+  </g>
+  <text x="95" y="406" text-anchor="middle" font-size="13" font-weight="600" fill="#1b1d1f">Utilizador</text>
+  <text x="95" y="423" text-anchor="middle" font-size="11" fill="#5b6675">docente / gestor</text>
+
+  <!-- Fronteira do sistema -->
+  <rect x="250" y="80" width="380" height="500" rx="14" fill="#f7f8fa" stroke="#6C63E8" stroke-width="2"/>
+  <text x="440" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#6C63E8">SprintLab Chatbox</text>
+
+  <!-- Associações ator -> casos de uso -->
+  <g stroke="#9aa1ab" stroke-width="1.3">
+    <line x1="122" y1="320" x2="278" y2="150"/>
+    <line x1="124" y1="324" x2="278" y2="220"/>
+    <line x1="124" y1="330" x2="278" y2="290"/>
+    <line x1="124" y1="338" x2="278" y2="360"/>
+    <line x1="122" y1="346" x2="278" y2="430"/>
+    <line x1="120" y1="352" x2="278" y2="500"/>
+  </g>
+
+  <!-- Casos de uso (elipses) -->
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <ellipse cx="440" cy="150" rx="165" ry="29" fill="#e8eafc" stroke="#6C63E8" stroke-width="1.6"/>
+    <text x="440" y="148" font-size="13.5" font-weight="600" fill="#1b1d1f">Consultar o projeto</text>
+    <text x="440" y="165" font-size="11" fill="#5b6675">linguagem natural</text>
+
+    <ellipse cx="440" cy="220" rx="165" ry="29" fill="#e8f7ee" stroke="#16a34a" stroke-width="1.6"/>
+    <text x="440" y="218" font-size="13.5" font-weight="600" fill="#1b1d1f">Gerar relatório e gráficos</text>
+    <text x="440" y="235" font-size="11" fill="#5b6675">determinístico</text>
+
+    <ellipse cx="440" cy="290" rx="165" ry="29" fill="#fff3e6" stroke="#fc6d26" stroke-width="1.6"/>
+    <text x="440" y="288" font-size="13.5" font-weight="600" fill="#1b1d1f">Gerir issues</text>
+    <text x="440" y="305" font-size="11" fill="#5b6675">criar · fechar · atualizar · apagar</text>
+
+    <ellipse cx="440" cy="360" rx="165" ry="29" fill="#e6fbf7" stroke="#0d9488" stroke-width="1.6"/>
+    <text x="440" y="358" font-size="13.5" font-weight="600" fill="#1b1d1f">Investigar código</text>
+    <text x="440" y="375" font-size="11" fill="#5b6675">git blame + análise IA</text>
+
+    <ellipse cx="440" cy="430" rx="165" ry="29" fill="#fdeaf3" stroke="#db2777" stroke-width="1.6"/>
+    <text x="440" y="428" font-size="13.5" font-weight="600" fill="#1b1d1f">Gerar e committar código</text>
+    <text x="440" y="445" font-size="11" fill="#5b6675">branch ai/* + Merge Request</text>
+
+    <ellipse cx="440" cy="500" rx="165" ry="29" fill="#f3f4f6" stroke="#5b6675" stroke-width="1.6"/>
+    <text x="440" y="498" font-size="13.5" font-weight="600" fill="#1b1d1f">Configurar GitLab</text>
+    <text x="440" y="515" font-size="11" fill="#5b6675">multi-tenant (workspaces)</text>
+  </g>
+
+  <!-- Atores secundários -->
+  <g stroke="#9aa1ab" stroke-width="1.3" stroke-dasharray="5 4">
+    <line x1="605" y1="290" x2="770" y2="230"/>
+    <line x1="605" y1="220" x2="770" y2="230"/>
+    <line x1="605" y1="500" x2="770" y2="230"/>
+    <line x1="605" y1="150" x2="770" y2="430"/>
+    <line x1="605" y1="360" x2="770" y2="430"/>
+    <line x1="605" y1="430" x2="770" y2="430"/>
+  </g>
+  <g text-anchor="middle">
+    <rect x="700" y="205" width="150" height="50" rx="10" fill="#fff3e6" stroke="#fc6d26" stroke-width="1.6"/>
+    <text x="775" y="227" font-size="13" font-weight="700" fill="#c2410c">GitLab API</text>
+    <text x="775" y="243" font-size="10.5" fill="#5b6675">fonte de dados</text>
+    <rect x="700" y="405" width="150" height="50" rx="10" fill="#fdeaf3" stroke="#db2777" stroke-width="1.6"/>
+    <text x="775" y="427" font-size="13" font-weight="700" fill="#be185d">Groq (IA)</text>
+    <text x="775" y="443" font-size="10.5" fill="#5b6675">NLP / function calling</text>
+  </g>
+
+  <text x="460" y="606" text-anchor="middle" font-size="11" fill="#aab0b8">Figura X — Diagrama de Casos de Uso</text>
+</svg>

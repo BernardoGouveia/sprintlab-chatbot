@@ -1,0 +1,77 @@
+<svg viewBox="0 0 1060 430" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#5b6675"/></marker>
+  </defs>
+  <rect width="1060" height="430" fill="#ffffff"/>
+  <text x="530" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#1b1d1f">BPMN To-Be — SprintLab Chatbox (no Teams)</text>
+
+  <!-- start -->
+  <circle cx="48" cy="81" r="18" fill="#e8f7ee" stroke="#16a34a" stroke-width="2.4"/>
+
+  <!-- T1 -->
+  <rect x="86" y="54" width="200" height="54" rx="9" fill="#e8eafc" stroke="#6C63E8" stroke-width="1.6"/>
+  <text x="186" y="78" text-anchor="middle" font-size="12" fill="#1b1d1f">Escrever em</text>
+  <text x="186" y="94" text-anchor="middle" font-size="12" fill="#1b1d1f">linguagem natural</text>
+
+  <!-- GW1 -->
+  <polygon points="382,49 414,81 382,113 350,81" fill="#fff8e1" stroke="#d97706" stroke-width="1.6"/>
+  <text x="382" y="85" text-anchor="middle" font-size="10.5" fill="#92400e">ação de</text>
+  <text x="382" y="34" text-anchor="middle" font-size="11" fill="#92400e">escrita?</text>
+
+  <!-- T2 (consulta) -->
+  <rect x="470" y="54" width="244" height="54" rx="9" fill="#e8f7ee" stroke="#16a34a" stroke-width="1.6"/>
+  <text x="592" y="78" text-anchor="middle" font-size="12" fill="#1b1d1f">Resposta com dados em</text>
+  <text x="592" y="94" text-anchor="middle" font-size="12" fill="#1b1d1f">tempo real do GitLab</text>
+  <circle cx="762" cy="81" r="18" fill="#fef2f2" stroke="#16a34a" stroke-width="3.2"/>
+
+  <!-- T3 (confirmação) -->
+  <rect x="272" y="182" width="220" height="54" rx="9" fill="#fff3e6" stroke="#fc6d26" stroke-width="1.6"/>
+  <text x="382" y="206" text-anchor="middle" font-size="12" fill="#1b1d1f">Cartão de confirmação</text>
+  <text x="382" y="222" text-anchor="middle" font-size="12" fill="#1b1d1f">(pré-visualização)</text>
+
+  <!-- GW2 -->
+  <polygon points="382,288 414,320 382,352 350,320" fill="#fff8e1" stroke="#d97706" stroke-width="1.6"/>
+  <text x="382" y="324" text-anchor="middle" font-size="11" fill="#92400e">confirma?</text>
+
+  <!-- T4 (executa) -->
+  <rect x="470" y="293" width="256" height="54" rx="9" fill="#fdeaf3" stroke="#db2777" stroke-width="1.6"/>
+  <text x="598" y="317" text-anchor="middle" font-size="12" fill="#1b1d1f">Executa no GitLab / cria</text>
+  <text x="598" y="333" text-anchor="middle" font-size="12" fill="#1b1d1f">branch + Merge Request</text>
+
+  <!-- T5 (resultado) -->
+  <rect x="758" y="293" width="210" height="54" rx="9" fill="#e8eafc" stroke="#6C63E8" stroke-width="1.6"/>
+  <text x="863" y="317" text-anchor="middle" font-size="12" fill="#1b1d1f">Resultado</text>
+  <text x="863" y="333" text-anchor="middle" font-size="12" fill="#1b1d1f">apresentado inline</text>
+  <circle cx="1012" cy="320" r="18" fill="#fef2f2" stroke="#16a34a" stroke-width="3.2"/>
+
+  <!-- End cancelado -->
+  <circle cx="208" cy="320" r="18" fill="#fef2f2" stroke="#dc2626" stroke-width="3.2"/>
+  <text x="208" y="362" text-anchor="middle" font-size="10.5" fill="#5b6675">cancelado</text>
+  <text x="208" y="376" text-anchor="middle" font-size="10.5" fill="#5b6675">(nada alterado)</text>
+
+  <!-- arrows -->
+  <g stroke="#5b6675" stroke-width="1.6" marker-end="url(#a2)" fill="none">
+    <line x1="66" y1="81" x2="84" y2="81"/>
+    <line x1="286" y1="81" x2="348" y2="81"/>
+    <line x1="414" y1="81" x2="468" y2="81"/>
+    <line x1="714" y1="81" x2="742" y2="81"/>
+    <!-- sim para baixo -->
+    <path d="M382,113 L382,182"/>
+    <line x1="382" y1="236" x2="382" y2="286"/>
+    <!-- confirma sim -->
+    <line x1="414" y1="320" x2="468" y2="320"/>
+    <line x1="726" y1="320" x2="756" y2="320"/>
+    <line x1="968" y1="320" x2="992" y2="320"/>
+    <!-- confirma nao -->
+    <line x1="350" y1="320" x2="228" y2="320"/>
+  </g>
+
+  <!-- gateway labels -->
+  <text x="436" y="74" font-size="11" font-weight="600" fill="#16a34a">não (consulta)</text>
+  <text x="396" y="150" font-size="11" font-weight="600" fill="#db2777">sim (escrita)</text>
+  <text x="430" y="312" font-size="11" font-weight="600" fill="#16a34a">sim</text>
+  <text x="286" y="312" font-size="11" font-weight="600" fill="#dc2626">não</text>
+
+  <text x="530" y="408" text-anchor="middle" font-size="12" font-weight="600" fill="#16a34a">✓ Sem mudança de contexto · toda a escrita sob confirmação humana · a branch principal nunca é tocada</text>
+  <text x="530" y="424" text-anchor="middle" font-size="11" fill="#aab0b8">Figura X — Diagrama BPMN To-Be</text>
+</svg>

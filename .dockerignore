@@ -1,0 +1,26 @@
+# Keep the image build context minimal. The Dockerfile COPYs server.py, src/ e
+# o frontend; everything else is excluded. Patterns use **/ so they also match
+# inside src/ (a plain "__pycache__/" only matches at the context root).
+.git
+.gitignore
+**/.env
+**/.env.*
+**/__pycache__
+**/*.py[cod]
+**/*.log
+**/*.bak
+.vscode/
+.idea/
+.vs/
+.claude/
+**/.DS_Store
+**/Thumbs.db
+tests/
+.pytest_cache/
+pytest.ini
+requirements-dev.txt
+_*.py
+_backup_pre_src/
+relatorio/
+_backup_codigo_antes_correcoes/
+_backup_relatorio_antes_atualizacao/

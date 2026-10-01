@@ -1,0 +1,89 @@
+<svg viewBox="0 0 1000 796" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#6C63E8"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="796" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#1b1d1f">Arquitetura do SprintLab Chatbox</text>
+  <text x="500" y="56" text-anchor="middle" font-size="13" fill="#5b6675">Cloud, stdlib-only, multi-tenant — corre gratuitamente num Hugging Face Space</text>
+
+  <!-- Teams -->
+  <rect x="360" y="74" width="280" height="54" rx="12" fill="#e8eafc" stroke="#6C63E8" stroke-width="2"/>
+  <text x="500" y="100" text-anchor="middle" font-size="15" font-weight="600" fill="#1b1d1f">Microsoft Teams</text>
+  <text x="500" y="118" text-anchor="middle" font-size="12" fill="#5b6675">separador embebido (utilizador final)</text>
+
+  <line x1="500" y1="128" x2="500" y2="168" stroke="#6C63E8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="512" y="152" font-size="11.5" fill="#5b6675">iframe · HTTPS (CSP frame-ancestors)</text>
+
+  <!-- HF Space outer -->
+  <rect x="90" y="172" width="820" height="388" rx="16" fill="#f7f8fa" stroke="#6C63E8" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="110" y="196" font-size="13" font-weight="700" fill="#6C63E8">Hugging Face Space · Docker · porta 7860</text>
+
+  <!-- Frontend -->
+  <rect x="120" y="210" width="760" height="58" rx="10" fill="#fff3e6" stroke="#fc6d26" stroke-width="1.6"/>
+  <text x="138" y="234" font-size="14" font-weight="700" fill="#c2410c">Frontend</text>
+  <text x="138" y="254" font-size="12.5" fill="#5b6675">chatbox.html · style.css · app.js — UI (3 temas, workspaces, cards, gráficos Chart.js)</text>
+
+  <!-- server.py -->
+  <rect x="120" y="282" width="760" height="66" rx="10" fill="#e8f7ee" stroke="#16a34a" stroke-width="1.6"/>
+  <text x="138" y="304" font-size="14" font-weight="700" fill="#15803d">server.py</text>
+  <text x="232" y="304" font-size="12.5" fill="#5b6675">— entrypoint HTTP · streaming SSE do chat · chave de acesso nas escritas · limites por IP</text>
+  <text x="138" y="322" font-size="11.5" fill="#5b6675">multi-tenant: cabeçalhos X-GL-Base / X-GL-Token / X-GL-Project lidos e validados a cada pedido</text>
+  <text x="138" y="339" font-size="11.5" fill="#5b6675">o token do servidor (GITLAB_TOKEN) só é usado na sua própria instância e projeto GitLab</text>
+
+  <!-- Modules: pacote src/ -->
+  <rect x="120" y="362" width="760" height="186" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.4"/>
+  <text x="138" y="384" font-size="12.5" font-weight="700" fill="#1b1d1f">src/ — pacote de módulos (lógica, stdlib) · 13 módulos</text>
+
+  <g font-size="12.5" fill="#1b1d1f" text-anchor="middle">
+    <!-- row 1: infraestrutura -->
+    <rect x="140" y="396" width="171" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="225.5" y="414" font-weight="600">config.py</text><text x="225.5" y="429" font-size="10.5" fill="#5b6675">env + prompts</text>
+    <rect x="323" y="396" width="171" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="408.5" y="414" font-weight="600">threading_server.py</text><text x="408.5" y="429" font-size="10.5" fill="#5b6675">threads · teto de ligações</text>
+    <rect x="506" y="396" width="171" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="591.5" y="414" font-weight="600">rate_limiter.py</text><text x="591.5" y="429" font-size="10.5" fill="#5b6675">limites de pedidos por IP</text>
+    <rect x="689" y="396" width="171" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="774.5" y="414" font-weight="600">cache.py</text><text x="774.5" y="429" font-size="10.5" fill="#5b6675">cache TTL · single-flight</text>
+    <!-- row 2: dados GitLab -->
+    <rect x="140" y="442" width="171" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="225.5" y="460" font-weight="600">gitlab_api.py</text><text x="225.5" y="475" font-size="10.5" fill="#5b6675">multi-tenant · fetchers</text>
+    <rect x="323" y="442" width="171" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="408.5" y="460" font-weight="600">analytics.py</text><text x="408.5" y="475" font-size="10.5" fill="#5b6675">stats · contexto · CSV</text>
+    <rect x="506" y="442" width="171" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="591.5" y="460" font-weight="600">report.py</text><text x="591.5" y="475" font-size="10.5" fill="#5b6675">relatório determinístico</text>
+    <rect x="689" y="442" width="171" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="774.5" y="460" font-weight="600">charts.py</text><text x="774.5" y="475" font-size="10.5" fill="#5b6675">dados Chart.js</text>
+    <!-- row 3: IA e ferramentas -->
+    <rect x="140" y="488" width="134" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="207" y="506" font-weight="600">llm.py</text><text x="207" y="521" font-size="10.5" fill="#5b6675">cliente Groq</text>
+    <rect x="286.5" y="488" width="134" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="353.5" y="506" font-weight="600">read_tools.py</text><text x="353.5" y="521" font-size="10.5" fill="#5b6675">leituras do modelo</text>
+    <rect x="433" y="488" width="134" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="500" y="506" font-weight="600">actions.py</text><text x="500" y="521" font-size="10.5" fill="#5b6675">escritas (validadas)</text>
+    <rect x="579.5" y="488" width="134" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="646.5" y="506" font-weight="600">blame.py</text><text x="646.5" y="521" font-size="10.5" fill="#5b6675">git blame + análise IA</text>
+    <rect x="726" y="488" width="134" height="40" rx="8" fill="#f3f4f6" stroke="#c7cbd1"/>
+    <text x="793" y="506" font-weight="600">code_commit.py</text><text x="793" y="521" font-size="10.5" fill="#5b6675">commit IA → ai/* + MR</text>
+  </g>
+
+  <!-- arrows to services -->
+  <line x1="300" y1="560" x2="300" y2="616" stroke="#6C63E8" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="700" y1="560" x2="700" y2="616" stroke="#6C63E8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="312" y="592" font-size="11.5" fill="#5b6675">HTTPS</text>
+  <text x="712" y="592" font-size="11.5" fill="#5b6675">HTTPS</text>
+
+  <!-- Groq -->
+  <rect x="120" y="620" width="360" height="68" rx="12" fill="#fdeaf3" stroke="#db2777" stroke-width="2"/>
+  <text x="300" y="648" text-anchor="middle" font-size="15" font-weight="700" fill="#be185d">Groq API · Llama 3.3 70B</text>
+  <text x="300" y="668" text-anchor="middle" font-size="12" fill="#5b6675">inferência LLM (NLP + function calling) — nível gratuito</text>
+
+  <!-- GitLab -->
+  <rect x="520" y="620" width="360" height="68" rx="12" fill="#fff3e6" stroke="#fc6d26" stroke-width="2"/>
+  <text x="700" y="648" text-anchor="middle" font-size="15" font-weight="700" fill="#c2410c">GitLab REST API v4</text>
+  <text x="700" y="668" text-anchor="middle" font-size="12" fill="#5b6675">issues · commits · blame · merge requests · estatísticas</text>
+
+  <text x="500" y="724" text-anchor="middle" font-size="11.5" fill="#8a93a0">Factos (números, blame, histórico) vêm do GitLab — determinísticos. A IA (Groq) só interpreta e propõe.</text>
+  <text x="500" y="742" text-anchor="middle" font-size="11" fill="#aab0b8">Figura X — Diagrama de Arquitetura do Sistema</text>
+</svg>
